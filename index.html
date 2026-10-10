@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aurora Arts | Coming Soon</title>
+<meta name="description" content="Aurora Arts is launching soon.">
+<style>
+  :root { --bg:#f3f8f9; --brown:#4a2713; --muted:#7a6558; --teal:#13a6c4; --blue:#0a6d9e; }
+  * { box-sizing:border-box; margin:0; }
+  html,body { height:100%; }
+  body {
+    background:var(--bg); color:var(--brown);
+    font-family:Georgia, "Times New Roman", serif;
+    display:grid; place-items:center; text-align:center;
+    padding:max(24px, env(safe-area-inset-top)) 24px max(24px, env(safe-area-inset-bottom));
+    overflow:hidden; position:relative;
+  }
+  .glow { position:fixed; inset:-10%; z-index:0; filter:blur(80px); opacity:.45; }
+  .glow i { position:absolute; border-radius:50%; animation:drift 20s ease-in-out infinite alternate; }
+  .glow i:nth-child(1){ width:45vw; height:30vw; left:0; top:5%; background:#7fd8e8; }
+  .glow i:nth-child(2){ width:40vw; height:30vw; right:0; bottom:5%; background:#6fb4de; animation-delay:-8s; }
+  @keyframes drift { to { transform:translate(6vw,-4vh) scale(1.12); } }
+  main { position:relative; z-index:1; max-width:640px; }
+  .logo { width:min(300px,70vw); height:auto; display:block; margin:0 auto 28px; }
+  h1 { font-size:clamp(1.9rem,5.5vw,3rem); font-weight:400; line-height:1.2; }
+  p { font-family:"Segoe UI", Helvetica, Arial, sans-serif; color:var(--muted); font-size:1.05rem; line-height:1.6; margin:18px auto 32px; max-width:44ch; }
+  a.mail { font-family:"Segoe UI", Helvetica, Arial, sans-serif; color:var(--brown); text-decoration:none; border:1.5px solid var(--brown); padding:12px 28px; border-radius:999px; display:inline-block; transition:background .2s, color .2s; }
+  a.mail:hover, a.mail:focus-visible { background:var(--brown); color:#fff; outline:none; }
+  footer { position:fixed; bottom:16px; left:0; right:0; z-index:1; font:.82rem "Segoe UI", Helvetica, Arial, sans-serif; color:var(--muted); }
+  @media (prefers-reduced-motion:reduce){ .glow i{ animation:none; } }
+</style>
+</head>
+<body>
+  <div class="glow" aria-hidden="true"><i></i><i></i></div>
+  <main>
+    <img class="logo" src="aurora-arts-logo.svg" alt="Aurora Arts">
+    <h1>Our new website is on its way.</h1>
+    <p>We are putting the finishing touches on Aurora Arts. Please check back soon.</p>
+    <a class="mail" href="mailto:info@auroraarts.ae">info@auroraarts.ae</a>
+  </main>
+  <footer>&copy; 2026 Aurora Arts. United Arab Emirates.</footer>
+</body>
+</html>
